@@ -1,0 +1,259 @@
+
+# version
+# Betaflight / STM32F405 (F405) 2026.6.1 Aug 22 2026 / 23:01:43 (6dbc4218f) MSP API: 1.48
+# config rev: 749fff1
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name FLYWOOF405S_AIO
+manufacturer_id FLWO
+mcu_id 003600573034510530333939
+signature 
+
+# name: firefly18-o4
+
+# resources
+resource PINIO 2 C08
+
+# feature
+feature -AIRMODE
+feature OSD
+
+# serial
+serial UART3 64 115200 57600 0 115200
+serial UART4 131073 115200 57600 0 115200
+
+# beeper
+beeper -GYRO_CALIBRATED
+beeper -RX_LOST
+beeper -RX_LOST_LANDING
+beeper -DISARMING
+beeper -ARMING
+beeper -ARMING_GPS_FIX
+beeper -ARMING_GPS_NO_FIX
+beeper -BAT_CRIT_LOW
+beeper -BAT_LOW
+beeper -GPS_STATUS
+beeper -ACC_CALIBRATION
+beeper -ACC_CALIBRATION_FAIL
+beeper -READY_BEEP
+beeper -DISARM_REPEAT
+beeper -ARMED
+beeper -SYSTEM_INIT
+beeper -ON_USB
+beeper -BLACKBOX_ERASE
+beeper -CRASHFLIP
+beeper -CAM_CONNECTION_OPEN
+beeper -CAM_CONNECTION_CLOSE
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# aux
+aux 0 0 0 1550 2100 0 0
+aux 1 1 2 1700 2100 0 0
+aux 2 3 2 1300 1700 0 0
+aux 3 13 1 1700 2100 0 0
+aux 4 19 3 1300 1700 0 0
+aux 5 28 2 900 1300 0 0
+aux 6 35 3 1700 2100 0 0
+
+# adjrange
+adjrange 1 0 3 925 1600 12 5 0 0
+
+# rxfail
+rxfail 0 s 1500
+rxfail 1 s 1500
+rxfail 2 s 1500
+rxfail 3 s 1450
+rxfail 6 s 2000
+
+# master
+set gyro_lpf1_static_hz = 0
+set dyn_notch_count = 1
+set dyn_notch_q = 500
+set acc_trim_pitch = 4
+set acc_trim_roll = 2
+set acc_calibration = -19,-25,49,1
+set dshot_bidir = ON
+set dshot_bitbang = OFF
+set motor_pwm_protocol = DSHOT300
+set motor_poles = 12
+set motor_output_reordering = 2,0,3,1,4,5,6,7
+set failsafe_delay = 10
+set failsafe_landing_time = 6
+set failsafe_throttle = 1300
+set failsafe_throttle_low_delay = 50
+set failsafe_procedure = AUTO-LAND
+set ibata_scale = 600
+set beeper_dshot_beacon_tone = 2
+set yaw_motors_reversed = ON
+set small_angle = 180
+set pid_process_denom = 2
+set osd_warn_bitmask = 410623
+set osd_rssi_alarm = 90
+set osd_rssi_dbm_alarm = -90
+set osd_tim1 = 0
+set osd_tim2 = 1
+set osd_vbat_pos = 449
+set osd_rssi_pos = 193
+set osd_link_quality_pos = 6210
+set osd_link_tx_power_pos = 2082
+set osd_rssi_dbm_pos = 2146
+set osd_rsnr_pos = 2178
+set osd_tim_2_pos = 1454
+set osd_flymode_pos = 3566
+set osd_throttle_pos = 3534
+set osd_crosshairs_pos = 238
+set osd_ah_sbar_pos = 314
+set osd_ah_pos = 2298
+set osd_current_pos = 2562
+set osd_mah_drawn_pos = 2596
+set osd_motor_diag_pos = 331
+set osd_craft_name_pos = 33
+set osd_compass_bar_pos = 2646
+set osd_altitude_pos = 7213
+set osd_debug_pos = 299
+set osd_power_pos = 0
+set osd_warnings_pos = 6581
+set osd_avg_cell_voltage_pos = 2531
+set osd_disarmed_pos = 6615
+set osd_esc_tmp_pos = 1168
+set osd_adjustment_range_pos = 83
+set osd_flip_arrow_pos = 2394
+set osd_core_temp_pos = 1136
+set osd_log_status_pos = 437
+set osd_stick_overlay_left_pos = 4562
+set osd_stick_overlay_right_pos = 4572
+set osd_rate_profile_name_pos = 3598
+set osd_pid_profile_name_pos = 3502
+set osd_profile_name_pos = 24
+set osd_camera_frame_pos = 175
+set osd_sys_warnings_pos = 2453
+set osd_sys_vtx_temp_pos = 1200
+set osd_stat_bitmask = 10620516
+set osd_displayport_device = AUTO
+set pinio_box = 40,41,255,255
+set stats_min_armed_time_s = 10
+set stats_total_flights = 4
+set stats_total_time_s = 48
+set craft_name = firefly18-o4
+set altitude_d_lpf = 100
+set ap_hover_throttle = 1400
+set ap_throttle_max = 1700
+set ap_altitude_p = 15
+set ap_altitude_i = 15
+set ap_altitude_d = 15
+set ap_altitude_f = 15
+
+profile 0
+
+# profile 0
+set profile_name = Default
+set dterm_lpf1_dyn_min_hz = 63
+set dterm_lpf1_dyn_max_hz = 127
+set dterm_lpf1_static_hz = 0
+set dterm_lpf2_static_hz = 127
+set vbat_sag_compensation = 30
+set crash_dthreshold = 80
+set crash_gthreshold = 600
+set crash_setpoint_threshold = 500
+set crash_recovery_rate = 150
+set crash_recovery = ON
+set iterm_relax_cutoff = 25
+set iterm_windup = 85
+set throttle_boost = 12
+set p_pitch = 92
+set i_pitch = 164
+set d_pitch = 76
+set f_pitch = 185
+set p_roll = 88
+set i_roll = 156
+set d_roll = 74
+set f_roll = 178
+set p_yaw = 88
+set i_yaw = 156
+set f_yaw = 178
+set horizon_level_strength = 50
+set d_max_roll = 81
+set d_max_pitch = 83
+set d_max_gain = 37
+set d_max_advance = 0
+set launch_control_mode = NORMAL
+set thrust_linear = 30
+set feedforward_averaging = OFF
+set feedforward_smooth_factor = 25
+set feedforward_jitter_factor = 5
+set dyn_idle_min_rpm = 70
+set simplified_master_multiplier = 135
+set simplified_d_gain = 185
+set simplified_pi_gain = 145
+set simplified_d_max_gain = 25
+set simplified_feedforward_gain = 110
+set simplified_pitch_d_gain = 90
+set simplified_dterm_filter_multiplier = 85
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set rateprofile_name = Default
+set roll_rc_rate = 12
+set pitch_rc_rate = 12
+set yaw_rc_rate = 12
+set roll_expo = 40
+set pitch_expo = 40
+set yaw_expo = 20
+
+rateprofile 1
+
+# rateprofile 1
+set rateprofile_name = DEFAULT
+
+rateprofile 2
+
+# rateprofile 2
+set rateprofile_name = Experim
+set roll_rc_rate = 12
+set pitch_rc_rate = 12
+set yaw_rc_rate = 12
+set roll_expo = 40
+set pitch_expo = 40
+set yaw_expo = 20
+
+rateprofile 3
+
+battery_profile 0
+
+# battery_profile 0
+set battery_profile_name = LiHV
+set bat_capacity = 680
+set vbat_max_cell_voltage = 440
+set vbat_min_cell_voltage = 340
+set vbat_warning_cell_voltage = 340
+
+battery_profile 1
+
+battery_profile 2
+
+# restore original rateprofile selection
+rateprofile 0
+
+# restore original battery_profile selection
+battery_profile 0
+
+# save configuration
+save
