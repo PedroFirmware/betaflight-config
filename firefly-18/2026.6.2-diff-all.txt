@@ -3,8 +3,8 @@
 # diff all
 
 # version
-# Betaflight / STM32F405 (F405) 2026.6.1 Aug 22 2026 / 23:01:43 (6dbc4218f) MSP API: 1.48
-# config rev: 749fff1
+# Betaflight / STM32F405 (F405) 2026.6.2 Oct 25 2026 / 16:47:55 (e0b7bb01b) MSP API: 1.48
+# config rev: 3a406c5
 
 # start the command batch
 batch start
